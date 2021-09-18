@@ -1,10 +1,19 @@
 #pragma once
-
+#include <iostream>
 
 using namespace std;
 class Login
 {
+	Login(string name, string pass) {
+		// User user = new User(name, pass);
 
+		//Hämta listan med alla namn och lösenord från en fil.
+
+		// Kolla så att användarnamnet finns i listan och att det stämmer med lösenordet.
+
+		// om inte det finns med error.
+
+	}
 	
 	// skapa en userklass.
 
@@ -22,9 +31,9 @@ class Login
 	//MyFile.open("here.txt");
 	//MyFile << "here is some text";
 	//MyFile.close();
+	// :: Slut sätt att skapa filer :: //
 
 
-	//Ett sätt att läsa och skriva från/till fil.
 
 
 	// User name, password. Består av String.
