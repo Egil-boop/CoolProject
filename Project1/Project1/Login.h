@@ -1,11 +1,19 @@
 #pragma once
 #include <iostream>
+#include <fstream>
+#include "User.h"; // <-- För att kunna komma åt User konstruktorn.
 
 using namespace std;
 class Login
 {
 	Login(string name, string pass) {
-		// User user = new User(name, pass);
+		
+
+
+
+		User user(name,pass); //Skapar en ny instance.
+
+		
 
 		//Hämta listan med alla namn och lösenord från en fil.
 
@@ -14,16 +22,8 @@ class Login
 		// om inte det finns med error.
 
 	}
-	
-	// skapa en userklass.
+			
 
-	//Function getUserNameAndPassword(String name, String password);
-	 // User user = new User (name, password);
-		
-	//Function createUser(String name, String password)
-	// Vill kolla så att någon med samma användarnamn inte finns. 
-	// Vill kolla så att namnet är inom ramen för hur långa namn får vara.
-	// (Kolla så att lösenordet uppfyller kraven för ett säkert lösenord.)
 	
 	// :: Sätt att skapa filer :: //
 	// #include <fstream>
@@ -47,4 +47,6 @@ class Login
 
 
 };
+
+
 
