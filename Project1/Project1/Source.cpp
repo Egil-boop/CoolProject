@@ -1,8 +1,19 @@
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
 int main() {
+
+	const int SIZE = 2;
+	string name[SIZE] = { "Jim", "EGil" };
+	string password[SIZE] = { "katt", "hund" };
+
+	ofstream fout("userDataBase.txt");
+
+	for (int i = 0; i < SIZE; i++) {
+		fout << name[i] << " " << password[i] << endl;
+ 	}
 
 	cout << "Hello";
 	return 0; 

@@ -2,10 +2,13 @@
 #include <iostream>
 #include <fstream>
 #include "User.h"; // <-- För att kunna komma åt User konstruktorn.
-
+#include <map>;
 using namespace std;
 class Login
 {
+public:
+	
+
 	Login(string name, string pass) {
 		
 
@@ -13,18 +16,22 @@ class Login
 
 		User user(name,pass); //Skapar en ny instance.
 
-		
-
+	
 		//Hämta listan med alla namn och lösenord från en fil.
 
-		// Kolla så att användarnamnet finns i listan och att det stämmer med lösenordet.
-
-		// om inte det finns med error.
 
 	}
-			
+		
 
-	
+	// Hitta rätt user i textfilen och sedan lägg in det i en mapp med keys och ha username som nyckel och password som value. Sedan kan man kolla om det man
+	// har skrivit in stämmer med vad man har i sin map.
+	void readUserDataBase(string user, string password);
+
+
+private:
+	map <string, string > userDataBase;
+	string username;
+
 	// :: Sätt att skapa filer :: //
 	// #include <fstream>
 	//ofstream MyFile;

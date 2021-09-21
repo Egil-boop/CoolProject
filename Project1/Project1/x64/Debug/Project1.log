@@ -1,0 +1,5 @@
+﻿  Source.cpp
+  User.cpp
+C:\Users\egge1\source\gitProj\Project1\Project1\User.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Generating Code...
+  Project1.vcxproj -> C:\Users\egge1\source\gitProj\Project1\x64\Debug\Project1.exe
