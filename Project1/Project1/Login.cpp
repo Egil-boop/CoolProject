@@ -1,12 +1,19 @@
 #include "Login.h"
 #include <fstream>
-
+using namespace std;
 // Försöker förstå headerFiler..
 Login::Login(string user, string password) {
 
 	
 	username =  user;
 	password = password;
+	ifstream fin("userDataBase.txt", ifstream::binary);
+
+	if (fin) {
+		fin.seekg(0, fin.end);
+		int length = fin.tellg();
+		fin.seekg(0, fin.beg);
+	}
 
 }
 
