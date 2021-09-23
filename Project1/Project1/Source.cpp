@@ -1,21 +1,26 @@
 #include <iostream>
 #include <fstream>
+#include "Login.h";
 
 using namespace std;
 
 int main() {
 
-	const int SIZE = 2;
-	string name[SIZE] = { "Jim", "EGil" };
-	string password[SIZE] = { "katt", "hund" };
+	//const int SIZE = 2;
+	//string name[SIZE] = { "Jim", "EGil" };
+	//string password[SIZE] = { "katt", "hund" };
 
-	ofstream fout("userDataBase.txt");
+	//ofstream fout("userDataBase.txt");
 
-	for (int i = 0; i < SIZE; i++) {
-		fout << name[i] << " " << password[i] << endl;
- 	}
+	//for (int i = 0; i < SIZE; i++) {
+	//fout << name[i] << " " << password[i] << endl;
+ //	}
 
-	cout << "Hello";
+
+	Login log;
+	log.putUserNamesAndPasswordInMap("userDataBase.txt");
+	
+	
 	return 0; 
 
 	//Login login = new Login();

@@ -1,38 +1,36 @@
 #pragma once
 #include <iostream>
-#include <fstream>
+
 #include "User.h"; // <-- För att kunna komma åt User konstruktorn.
 #include <map>;
+
 namespace std
 {
 	class Login
 	{
 	public:
-		
-
-		Login(string name, string pass) {
 
 
+		Login();
 
-		User user(name, pass); //Skapar en ny instance.
+		//User user(name, pass); //Skapar en ny instance.
 
-			
 
 			//Hämta listan med alla namn och lösenord från en fil.
 
-
-		}
 
 
 		// Hitta rätt user i textfilen och sedan lägg in det i en mapp med keys och ha username som nyckel och password som value. Sedan kan man kolla om det man
 		// har skrivit in stämmer med vad man har i sin map.
 		void readUserDataBase(string user, string password);
+		void putUserNamesAndPasswordInMap(string file);
 
 
 	private:
 		map <string, string > userDataBase;
 		string username;
-	
+
+
 
 		// :: Sätt att skapa filer :: //
 		// #include <fstream>
