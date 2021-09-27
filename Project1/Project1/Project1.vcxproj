@@ -139,12 +139,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Concert.cpp" />
+    <ClCompile Include="CreateConcert.cpp" />
     <ClCompile Include="CreatUser.cpp" />
     <ClCompile Include="Login.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="User.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Concert.h" />
+    <ClInclude Include="CreateConcert.h" />
     <ClInclude Include="CreatUser.h" />
     <ClInclude Include="Login.h" />
     <ClInclude Include="User.h" />
