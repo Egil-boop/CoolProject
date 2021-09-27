@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include "Login.h";
+#include "CreatUser.h";
 
 using namespace std;
 
@@ -16,6 +17,9 @@ int main() {
 	//fout << name[i] << " " << password[i] << endl;
  //	}
 
+	//Skapa Användare
+	CreatUser creatUser;
+	creatUser.putUserInSystem("userDataBase.txt");
 
 	Login log;
 	log.putUserNamesAndPasswordInMap("userDataBase.txt");
