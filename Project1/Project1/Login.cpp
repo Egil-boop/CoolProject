@@ -7,13 +7,32 @@ using namespace std;
 Login::Login() {
 
 
-
-
-
-
-
-
 }
+
+bool Login::canILogIn() {
+
+	cout << "Write username \n";
+
+	string user;
+	cin >> user;
+	if (userDataBase.find(user) == userDataBase.end()) {
+		cout << "The user was not found";
+		return false;
+	}
+
+	cout << "Write password \n";
+	string password;
+	cin >> password;
+
+	if (userDataBase.at(user) != password) {
+		cout << "Wrong password";
+		return false;
+	}
+
+	cout << "Welcome! to the program";
+	return true;
+}
+
 
 void Login::putUserNamesAndPasswordInMap(string file) {
 	// Läser in varje rad och sätter in i en string. 
@@ -29,7 +48,7 @@ void Login::putUserNamesAndPasswordInMap(string file) {
 
 		while (getline(fin, tp))
 		{
-			
+
 			//stringstream används för att dela upp stringen.
 			stringstream s(tp);
 			while (s >> tp)
@@ -45,6 +64,8 @@ void Login::putUserNamesAndPasswordInMap(string file) {
 				}
 
 			}
+
+
 			// Pararihop användaren med lösenordet genom att placera de i en map
 			userDataBase.insert(pair<string, string>(user, password));
 			// Kontroll kod för att kolla att storleken på mappen är korrekt.

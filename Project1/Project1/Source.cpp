@@ -19,7 +19,7 @@ int main() {
 
 	Login log;
 	log.putUserNamesAndPasswordInMap("userDataBase.txt");
-	
+	log.canILogIn();
 	
 	return 0; 
 

@@ -24,7 +24,7 @@ namespace std
 		// har skrivit in stämmer med vad man har i sin map.
 		void readUserDataBase(string user, string password);
 		void putUserNamesAndPasswordInMap(string file);
-
+		bool canILogIn();
 
 	private:
 		map <string, string > userDataBase;

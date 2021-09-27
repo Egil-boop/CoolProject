@@ -2,11 +2,11 @@
 class CreatUser
 {
 
-	// Skapar en user och stoppar de i en (Krypterad fil)
+	// Skapar en user och stoppar de i en ("Krypterad fil")
 public:
-	CreatUser() {
+	CreatUser();
 
-	}
+	
 
 
 	// Kalla på funktion för att kolla om namn och pass stämmer överäns med reglerna.
