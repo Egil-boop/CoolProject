@@ -20,7 +20,19 @@ void CreatUser::putUserInSystem(string file) {
 	}
 	cout << "Type in your details. The password must be more then 4 char long and less then 16" << endl;
 	string password;
+
+	// Parametrar som behövs för att stänga av ECHO i Terminalen.
+	HANDLE hStdin = GetStdHandle(STD_INPUT_HANDLE);
+	DWORD mode = 0;
+
+	// Stänger av echo
+	GetConsoleMode(hStdin, &mode);
+	SetConsoleMode(hStdin, mode & (~ENABLE_ECHO_INPUT));
+		
 	cin >> password;
+	// Sätter på echo.
+	SetConsoleMode(hStdin, mode);
+
 	if (!doesPasswordFollowTheRule(password)) {
 		cout << "You have not follwed the clear rule of the password" << endl;
 		return;
@@ -57,4 +69,18 @@ bool CreatUser::doesPasswordFollowTheRule(string password) {
 
 
 }
+
+//void CreatUser::hideOutPut(HANDLE* hStdin, DWORD mode, bool isOn) {
+//	
+//	if (isOn) {
+//		GetConsoleMode(hStdin, &mode);
+//		SetConsoleMode(hStdin, mode & (~ENABLE_ECHO_INPUT));
+//	}
+//	else if(!isOn) {
+//		SetConsoleMode(hStdin, mode);
+//	}
+//	
+//
+//
+//}
 

@@ -2,6 +2,7 @@
 #include <fstream>
 #include <string>
 #include <sstream>
+
 using namespace std;
 // Försöker förstå headerFiler..
 Login::Login() {
@@ -21,6 +22,7 @@ bool Login::canILogIn() {
 	}
 
 	cout << "Write password \n";
+
 	string password;
 	cin >> password;
 

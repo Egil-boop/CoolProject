@@ -1,5 +1,6 @@
 #pragma once
 #include<iostream>;
+#include <Windows.h>
 namespace std {
 
 
@@ -15,7 +16,7 @@ namespace std {
 	private:
 		bool doesPasswordFollowTheRule(string);
 		bool doesUsernameFollowTheRule(string);
-
+		/*void hideOutPut(HANDLE*,DWORD,bool);*/
 
 
 
